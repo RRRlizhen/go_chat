@@ -36,7 +36,7 @@ func (s *Server) printMsg() {
 func (s *Server) sendMsg() {
 	for {
 		daytime := time.Now().String()
-		time.Sleep(10 * time.Second)
+		time.Sleep(1 * time.Second)
 		for _, c := range s.clients {
 			fmt.Println(c.userName)
 			n, err := s.conn.WriteToUDP([]byte(daytime), c.userAddr)

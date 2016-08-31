@@ -42,7 +42,7 @@ func (c *Client) inputMsg() {
 	//处理断开的动作
 	var msg string
 	for c.gkey {
-		fmt.Println("msg: ")
+		fmt.Printf("msg: ")
 		_, err := fmt.Scanln(&msg)
 		checkError(err, "inputMsg")
 
@@ -78,11 +78,11 @@ func main() {
 	c.sendMessage = make(chan string)
 	c.receiveMessage = make(chan string)
 
-	fmt.Println("input id:")
+	fmt.Printf("input id:")
 	_, err = fmt.Scanln(&c.userId)
 	checkError(err, "main")
 
-	fmt.Println("input username:")
+	fmt.Printf("input username:")
 	_, err = fmt.Scanln(&c.userName)
 	checkError(err, "main")
 
